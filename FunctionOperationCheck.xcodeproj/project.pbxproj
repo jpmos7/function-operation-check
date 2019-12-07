@@ -31,7 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DDFBB6D6239687640076474B /* FunctionOperationCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunctionOperationCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDFBB6D6239687640076474B /* 動作確認.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "動作確認.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDFBB6D9239687640076474B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDFBB6DB239687640076474B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DDFBB6E22396876B0076474B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -130,7 +130,7 @@
 		DDFBB6D7239687640076474B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DDFBB6D6239687640076474B /* FunctionOperationCheck.app */,
+				DDFBB6D6239687640076474B /* 動作確認.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -290,7 +290,7 @@
 			);
 			name = FunctionOperationCheck;
 			productName = FunctionOperationCheck;
-			productReference = DDFBB6D6239687640076474B /* FunctionOperationCheck.app */;
+			productReference = DDFBB6D6239687640076474B /* 動作確認.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -561,12 +561,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U63DLM6498;
 				INFOPLIST_FILE = FunctionOperationCheck/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.moesaito.FunctionOperationCheck;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "動作確認";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -580,12 +581,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U63DLM6498;
 				INFOPLIST_FILE = FunctionOperationCheck/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.moesaito.FunctionOperationCheck;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "動作確認";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
