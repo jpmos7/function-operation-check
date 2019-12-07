@@ -19,12 +19,10 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // 東京駅の位置情報を設定（緯度: 35.681236 経度: 139.767125）
-        let latitude = 35.681236
-        let longitude = 139.767125
-
         // 緯度・軽度を設定
-        let location = CLLocationCoordinate2DMake(latitude, longitude)
+        guard let location = presenter?.callSetLatitudeAndLongitudeOfTokyoStation() else {
+            fatalError()
+        }
         // マップビューに緯度・軽度を設定
         mapView.setCenter(location, animated:true)
 

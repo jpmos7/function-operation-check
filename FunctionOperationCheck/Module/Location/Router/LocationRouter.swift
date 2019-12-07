@@ -10,7 +10,8 @@ import Foundation
 import UIKit
 
 protocol LocationWireframe {
-
+    var viewController: LocationViewController? { get set }
+    func initializerModule()
 }
 
 class LocationRouter: LocationWireframe {
