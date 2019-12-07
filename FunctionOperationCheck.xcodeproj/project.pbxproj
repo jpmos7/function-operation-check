@@ -107,6 +107,7 @@
 		DD5B7EC2239B9DEA00D6D210 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DDFBB6E72396876B0076474B /* Info.plist */,
 				DDFBB6E22396876B0076474B /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -136,7 +137,6 @@
 				DD5B7EC0239B9D4400D6D210 /* Application */,
 				DDFBB6EF239688C50076474B /* Module */,
 				DD5B7EC2239B9DEA00D6D210 /* Resources */,
-				DDFBB6E72396876B0076474B /* Info.plist */,
 				DDFBB6E42396876B0076474B /* LaunchScreen.storyboard */,
 				DDFBB70E239B710A0076474B /* R.generated.swift */,
 				DDFBB710239B75D60076474B /* Main.storyboard */,
@@ -560,7 +560,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U63DLM6498;
-				INFOPLIST_FILE = FunctionOperationCheck/Info.plist;
+				INFOPLIST_FILE = FunctionOperationCheck/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -579,7 +579,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U63DLM6498;
-				INFOPLIST_FILE = FunctionOperationCheck/Info.plist;
+				INFOPLIST_FILE = FunctionOperationCheck/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
