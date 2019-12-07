@@ -87,6 +87,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DD5B7EC0239B9D4400D6D210 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				DDFBB6D9239687640076474B /* AppDelegate.swift */,
+				DDFBB6DB239687640076474B /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		DD5B7EC1239B9DA700D6D210 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				DDFBB6ED239688040076474B /* RootRouter.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		DD5B7EC2239B9DEA00D6D210 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DDFBB6E22396876B0076474B /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		DDFBB6CD239687640076474B = {
 			isa = PBXGroup;
 			children = (
@@ -108,14 +133,12 @@
 		DDFBB6D8239687640076474B /* FunctionOperationCheck */ = {
 			isa = PBXGroup;
 			children = (
-				DDFBB6D9239687640076474B /* AppDelegate.swift */,
-				DDFBB6DB239687640076474B /* SceneDelegate.swift */,
-				DDFBB6ED239688040076474B /* RootRouter.swift */,
-				DDFBB70E239B710A0076474B /* R.generated.swift */,
+				DD5B7EC0239B9D4400D6D210 /* Application */,
 				DDFBB6EF239688C50076474B /* Module */,
-				DDFBB6E22396876B0076474B /* Assets.xcassets */,
-				DDFBB6E42396876B0076474B /* LaunchScreen.storyboard */,
+				DD5B7EC2239B9DEA00D6D210 /* Resources */,
 				DDFBB6E72396876B0076474B /* Info.plist */,
+				DDFBB6E42396876B0076474B /* LaunchScreen.storyboard */,
+				DDFBB70E239B710A0076474B /* R.generated.swift */,
 				DDFBB710239B75D60076474B /* Main.storyboard */,
 				DDFBB712239B75F20076474B /* ViewController.swift */,
 			);
@@ -128,6 +151,7 @@
 				DDFBB704239691000076474B /* Tab */,
 				DDFBB6F0239688C50076474B /* Map */,
 				DDFBB715239B7CDD0076474B /* Location */,
+				DD5B7EC1239B9DA700D6D210 /* Root */,
 			);
 			path = Module;
 			sourceTree = "<group>";
