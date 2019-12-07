@@ -30,26 +30,12 @@
                     <view key="view" contentMode="scaleToFill" id="b2Z-vz-hTK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="CIv-mE-z0b">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                            </mapView>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="QlT-Sc-eT5" firstAttribute="trailing" secondItem="CIv-mE-z0b" secondAttribute="trailing" id="6EZ-T7-aaW"/>
-                            <constraint firstItem="CIv-mE-z0b" firstAttribute="leading" secondItem="QlT-Sc-eT5" secondAttribute="leading" id="Rm3-J7-2nU"/>
-                            <constraint firstItem="QlT-Sc-eT5" firstAttribute="bottom" secondItem="CIv-mE-z0b" secondAttribute="bottom" id="fxW-2Z-Pnv"/>
-                            <constraint firstItem="CIv-mE-z0b" firstAttribute="top" secondItem="QlT-Sc-eT5" secondAttribute="top" id="pDx-KA-hHA"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="QlT-Sc-eT5"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="地図情報" image="map.fill" catalog="system" id="RkO-8t-88Y"/>
                     <navigationItem key="navigationItem" id="3cv-ii-VN6"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="mapView" destination="CIv-mE-z0b" id="9rM-zI-OQd"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yAS-IN-Dvd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
