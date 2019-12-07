@@ -148,10 +148,10 @@
 		DDFBB6EF239688C50076474B /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				DD5B7EC1239B9DA700D6D210 /* Root */,
 				DDFBB704239691000076474B /* Tab */,
 				DDFBB6F0239688C50076474B /* Map */,
 				DDFBB715239B7CDD0076474B /* Location */,
-				DD5B7EC1239B9DA700D6D210 /* Root */,
 			);
 			path = Module;
 			sourceTree = "<group>";
