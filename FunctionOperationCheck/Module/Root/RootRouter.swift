@@ -9,9 +9,13 @@
 import Foundation
 import UIKit
 
+/// 初期画面を呼び出す Router
 class RootRouter {
 
-    func presentFirstScreen(in window: UIWindow) {
+    /// タブ遷移を実装
+    /// - Parameter window: ウィンドウ
+    func implementTabTransition(in window: UIWindow) {
+
         // 地図情報
         let mapView = R.storyboard.map.map()
         let mapNavigation = UINavigationController(rootViewController: mapView!)
