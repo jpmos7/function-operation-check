@@ -27,11 +27,11 @@ class MapViewController: UIViewController {
         mapView.setCenter(location, animated:true)
 
         // 縮尺を設定
-        var region = mapView.region
-        region.center = location
-        region.span.latitudeDelta = 0.02
-        region.span.longitudeDelta = 0.02
+        let regionBeforeSetScale = mapView.region
+        guard let regionAfterSetScale = presenter?.callSetScale(region: regionBeforeSetScale, location: location) else {
+            fatalError()
+        }
         // マップビューに縮尺を設定
-        mapView.setRegion(region,animated:true)
+        mapView.setRegion(regionAfterSetScale, animated:true)
     }
 }

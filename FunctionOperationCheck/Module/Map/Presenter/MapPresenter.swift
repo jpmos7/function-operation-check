@@ -13,6 +13,12 @@ import MapKit
 protocol MapPresentation {
     /// interactor の setLatitudeAndLongitudeOfTokyoStation メソッドの結果を取得する
     func callSetLatitudeAndLongitudeOfTokyoStation() -> CLLocationCoordinate2D
+
+    /// interactor の setScale メソッドの結果を取得する
+    /// - Parameters:
+    ///   - region: 縮尺領域
+    ///   - location: 位置情報
+    func callSetScale(region: MKCoordinateRegion, location: CLLocationCoordinate2D) -> MKCoordinateRegion
 }
 
 /// Map の Presenter
@@ -30,5 +36,13 @@ class MapPresenter: MapPresentation {
     /// interactor の setLatitudeAndLongitudeOfTokyoStation メソッドの結果を取得する
     func callSetLatitudeAndLongitudeOfTokyoStation() -> CLLocationCoordinate2D {
         return interactor.setLatitudeAndLongitudeOfTokyoStation()
+    }
+
+    /// interactor の setScale メソッドの結果を取得する
+    /// - Parameters:
+    ///   - region: 縮尺領域
+    ///   - location: 位置情報
+    func callSetScale(region: MKCoordinateRegion, location: CLLocationCoordinate2D) -> MKCoordinateRegion {
+        return interactor.setScale(regionBeforeSetScale: region, location: location)
     }
 }
