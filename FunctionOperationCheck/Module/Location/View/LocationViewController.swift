@@ -38,11 +38,25 @@ class LocationViewController: UIViewController {
         setupLocationManager()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+
+        // ラベルに初期値を設定する
+        latitude.text = "デフォルト"
+        longitude.text = "デフォルト"
+    }
+
     /// "位置情報を取得"ボタンを押下した際、位置情報をラベルに反映する
     /// - Parameter sender: "位置情報を取得"ボタン
     @IBAction func getLocationInfo(_ sender: Any) {
-        self.latitude.text = latitudeNow
-        self.longitude.text = longitudeNow
+        // マネージャの設定
+        let status = CLLocationManager.authorizationStatus()
+        if status == .denied {
+            showAlert()
+        } else if status == .authorizedWhenInUse {
+            self.latitude.text = latitudeNow
+            self.longitude.text = longitudeNow
+        }
     }
 
     /// ロケーションマネージャのセットアップ
@@ -55,10 +69,33 @@ class LocationViewController: UIViewController {
 
         // マネージャの設定
         let status = CLLocationManager.authorizationStatus()
+
+        // ステータスごとの処理
         if status == .authorizedWhenInUse {
             locationManager.delegate = self
             locationManager.startUpdatingLocation()
         }
+    }
+
+    /// アラートを表示する
+    func showAlert() {
+        let alertTitle = "位置情報取得が許可されていません。"
+        let alertMessage = "設定アプリの「プライバシー > 一情報サービス > 動作確認」から変更してください。"
+        let alert: UIAlertController = UIAlertController(
+            title: alertTitle,
+            message: alertMessage,
+            preferredStyle:  UIAlertController.Style.alert
+        )
+        // OKボタン
+        let defaultAction: UIAlertAction = UIAlertAction(
+            title: "OK",
+            style: UIAlertAction.Style.default,
+            handler: nil
+        )
+        // UIAlertController に Action を追加
+        alert.addAction(defaultAction)
+        // Alertを表示
+        present(alert, animated: true, completion: nil)
     }
 }
 

@@ -23,7 +23,6 @@ protocol MapPresentation {
 
 /// Map の Presenter
 class MapPresenter: MapPresentation {
-    //weak var view: MapViewController?
 
     var interactor: MapUsecase!
     var router: MapWireframe!
