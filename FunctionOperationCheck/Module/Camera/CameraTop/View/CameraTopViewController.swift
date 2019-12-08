@@ -1,5 +1,5 @@
 //
-//  CameraViewController.swift
+//  CameraTopViewController.swift
 //  FunctionOperationCheck
 //
 //  Created by 齊藤萌 on 2019/12/07.
@@ -7,12 +7,11 @@
 //
 
 import UIKit
-import CoreLocation
 
-/// Camera の VIew
-class CameraViewController: UIViewController {
+/// CameraTop の VIew
+class CameraTopViewController: UIViewController {
 
-    var presenter: CameraPresentation?
+    var presenter: CameraTopPresentation?
 
     override func viewDidLoad() {
         super.viewDidLoad()

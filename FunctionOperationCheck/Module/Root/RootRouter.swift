@@ -27,15 +27,15 @@ class RootRouter {
         let locationNavigation = UINavigationController(rootViewController: locationView!)
 
         // カメラ
-        let cameraView = R.storyboard.camera.camera()
-        CameraRouter(viewController: cameraView!).initializerModule()
-        let cameraNavigation = UINavigationController(rootViewController: cameraView!)
+        let cameraTopView = R.storyboard.cameraTop.cameraTop()
+        CameraTopRouter(viewController: cameraTopView!).initializerModule()
+        let cameraTopNavigation = UINavigationController(rootViewController: cameraTopView!)
 
         // タブに詰める ViewController を追加する
         var viewControllers = [UIViewController]()
         viewControllers.append(mapNavigation)
         viewControllers.append(locationNavigation)
-        viewControllers.append(cameraNavigation)
+        viewControllers.append(cameraTopNavigation)
 
         // tabBarController に viewControllers をセットする
         let tabBarController = R.storyboard.tab.tab()
