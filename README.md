@@ -3,6 +3,7 @@
 iOSアプリは以下のバージョンに依存している。
 
 - iOS
+- macOS
 - Xcode
 - swift
 
@@ -12,3 +13,5 @@ iOSアプリは以下のバージョンに依存している。
 
 - 地図情報
 - 位置情報
+- カメラ
+    - UIImagePickerController
