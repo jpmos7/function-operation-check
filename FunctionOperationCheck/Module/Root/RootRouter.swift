@@ -2,9 +2,6 @@
 //  RootRouter.swift
 //  FunctionOperationCheck
 //
-//  Created by 齊藤萌 on 2019/12/03.
-//  Copyright © 2019 Swift-Biginners. All rights reserved.
-//
 
 import Foundation
 import UIKit
@@ -26,10 +23,16 @@ class RootRouter {
         LocationRouter(viewController: locationView!).initializerModule()
         let locationNavigation = UINavigationController(rootViewController: locationView!)
 
+        // カメラ
+        let cameraTopView = R.storyboard.cameraTop.cameraTop()
+        CameraTopRouter(viewController: cameraTopView!).initializerModule()
+        let cameraTopNavigation = UINavigationController(rootViewController: cameraTopView!)
+
         // タブに詰める ViewController を追加する
         var viewControllers = [UIViewController]()
         viewControllers.append(mapNavigation)
         viewControllers.append(locationNavigation)
+        viewControllers.append(cameraTopNavigation)
 
         // tabBarController に viewControllers をセットする
         let tabBarController = R.storyboard.tab.tab()

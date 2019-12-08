@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WWS-Bo-eJO">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="WVV-k7-zh8">
+            <objects>
+                <navigationController id="WWS-Bo-eJO" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1ln-A8-EFB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="9Z8-B3-nmr" kind="relationship" relationship="rootViewController" id="LOe-2D-ZXp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kuD-g7-LHb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-620" y="119"/>
+        </scene>
+        <!--カメラ-->
+        <scene sceneID="SPM-0g-zXB">
+            <objects>
+                <viewController storyboardIdentifier="CameraTop" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9Z8-B3-nmr" customClass="CameraTopViewController" customModule="動作確認" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aIW-fy-Y7h">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3T-B9-OgK">
+                                <rect key="frame" x="104" y="316" width="167" height="30"/>
+                                <state key="normal" title="UIImagePickerController"/>
+                                <connections>
+                                    <action selector="startUiImagePickerController:" destination="9Z8-B3-nmr" eventType="touchUpInside" id="fZo-mT-OM7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="f3T-B9-OgK" firstAttribute="centerY" secondItem="pPj-IM-OOM" secondAttribute="centerY" id="329-RD-PI5"/>
+                            <constraint firstItem="f3T-B9-OgK" firstAttribute="centerX" secondItem="pPj-IM-OOM" secondAttribute="centerX" id="LNT-h5-lnN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pPj-IM-OOM"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="カメラ" image="camera.fill" catalog="system" id="Ryx-0c-Kyg"/>
+                    <navigationItem key="navigationItem" id="kZF-T9-CFS"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ebN-8g-iK6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="231.19999999999999" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera.fill" catalog="system" width="64" height="48"/>
+    </resources>
+</document>

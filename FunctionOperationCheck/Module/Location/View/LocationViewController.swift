@@ -2,9 +2,6 @@
 //  LocationViewController.swift
 //  FunctionOperationCheck
 //
-//  Created by 齊藤萌 on 2019/12/07.
-//  Copyright © 2019 Swift-Biginners. All rights reserved.
-//
 
 import UIKit
 import CoreLocation
@@ -30,20 +27,8 @@ class LocationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // ラベルに初期値を設定する
-        latitude.text = "デフォルト"
-        longitude.text = "デフォルト"
-
         // ロケーションマネージャのセットアップ
         setupLocationManager()
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-
-        // ラベルに初期値を設定する
-        latitude.text = "デフォルト"
-        longitude.text = "デフォルト"
     }
 
     /// "位置情報を取得"ボタンを押下した際、位置情報をラベルに反映する
@@ -58,6 +43,14 @@ class LocationViewController: UIViewController {
             self.longitude.text = longitudeNow
         }
     }
+
+    /// "クリア"ボタンを押下した際、ラベルを初期化する
+    /// - Parameter sender: "クリア"ボタン
+    @IBAction func clearLabel(_ sender: Any) {
+        self.latitude.text = "デフォルト"
+        self.longitude.text = "デフォルト"
+    }
+
 
     /// ロケーションマネージャのセットアップ
     func setupLocationManager() {

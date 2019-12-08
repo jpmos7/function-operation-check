@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WWS-Bo-eJO">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,7 +12,7 @@
             <objects>
                 <navigationController id="WWS-Bo-eJO" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1ln-A8-EFB">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -28,11 +28,11 @@
             <objects>
                 <viewController storyboardIdentifier="Location" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9Z8-B3-nmr" customClass="LocationViewController" customModule="動作確認" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aIW-fy-Y7h">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ftl-Ly-Vs6" userLabel="Latitude">
-                                <rect key="frame" x="81" y="311.66666666666669" width="252" height="22"/>
+                                <rect key="frame" x="61.5" y="192" width="252" height="22"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="緯度：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ypY-I8-spq">
                                         <rect key="frame" x="0.0" y="0.0" width="52" height="22"/>
@@ -44,7 +44,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDr-bn-U9P">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="デフォルト" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDr-bn-U9P">
                                         <rect key="frame" x="52" y="0.0" width="200" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="LMn-qM-vLQ"/>
@@ -57,7 +57,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dTf-aF-sOm" userLabel="Longitude">
-                                <rect key="frame" x="81" y="373.66666666666669" width="252" height="22"/>
+                                <rect key="frame" x="61.5" y="254" width="252" height="22"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="経度：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PS5-OD-AGb">
                                         <rect key="frame" x="0.0" y="0.0" width="52" height="22"/>
@@ -69,7 +69,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcW-dc-qhp">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="デフォルト" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcW-dc-qhp">
                                         <rect key="frame" x="52" y="0.0" width="200" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="gyZ-il-jS5"/>
@@ -82,21 +82,30 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N4v-F4-ozW">
-                                <rect key="frame" x="153" y="435.66666666666669" width="108" height="30"/>
+                                <rect key="frame" x="133.5" y="316" width="108" height="30"/>
                                 <state key="normal" title="位置情報を取得"/>
                                 <connections>
                                     <action selector="getLocationInfo:" destination="9Z8-B3-nmr" eventType="touchUpInside" id="FWA-3B-WHd"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NKv-SA-4H0">
+                                <rect key="frame" x="164.5" y="366" width="46" height="30"/>
+                                <state key="normal" title="クリア"/>
+                                <connections>
+                                    <action selector="clearLabel:" destination="9Z8-B3-nmr" eventType="touchUpInside" id="g3S-Zz-Zaz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="NKv-SA-4H0" firstAttribute="top" secondItem="N4v-F4-ozW" secondAttribute="bottom" constant="20" id="1Sd-il-sr6"/>
                             <constraint firstItem="dTf-aF-sOm" firstAttribute="top" secondItem="Ftl-Ly-Vs6" secondAttribute="bottom" constant="40" id="3OC-to-deV"/>
                             <constraint firstItem="N4v-F4-ozW" firstAttribute="centerY" secondItem="pPj-IM-OOM" secondAttribute="centerY" id="Dgl-9Q-AcT"/>
                             <constraint firstItem="Ftl-Ly-Vs6" firstAttribute="centerX" secondItem="pPj-IM-OOM" secondAttribute="centerX" id="FdT-0p-73H"/>
                             <constraint firstItem="dTf-aF-sOm" firstAttribute="centerX" secondItem="pPj-IM-OOM" secondAttribute="centerX" id="GDB-G9-4d3"/>
                             <constraint firstItem="N4v-F4-ozW" firstAttribute="centerX" secondItem="pPj-IM-OOM" secondAttribute="centerX" id="PBe-Q6-f4G"/>
                             <constraint firstItem="N4v-F4-ozW" firstAttribute="top" secondItem="dTf-aF-sOm" secondAttribute="bottom" constant="40" id="iMR-My-BYc"/>
+                            <constraint firstItem="NKv-SA-4H0" firstAttribute="centerX" secondItem="pPj-IM-OOM" secondAttribute="centerX" id="rOD-LX-PSe"/>
                             <constraint firstItem="dTf-aF-sOm" firstAttribute="top" secondItem="Ftl-Ly-Vs6" secondAttribute="bottom" constant="40" id="v10-iR-xaj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pPj-IM-OOM"/>
@@ -105,8 +114,8 @@
                     <navigationItem key="navigationItem" id="kZF-T9-CFS"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="latitude" destination="oDr-bn-U9P" id="MXf-J0-KPw"/>
-                        <outlet property="longitude" destination="kcW-dc-qhp" id="KWQ-wS-j0P"/>
+                        <outlet property="latitude" destination="oDr-bn-U9P" id="KGs-Ra-mjn"/>
+                        <outlet property="longitude" destination="kcW-dc-qhp" id="vyZ-9o-LvD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ebN-8g-iK6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
