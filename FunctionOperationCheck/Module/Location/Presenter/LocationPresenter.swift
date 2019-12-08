@@ -8,12 +8,13 @@
 
 import Foundation
 
+/// Location の Presenter（プロトコル）
 protocol LocationPresentation {
 
 }
 
+/// Location の Presenter
 class LocationPresenter: LocationPresentation {
-    weak var view: LocationViewController?
     var interactor: LocationUsecase!
     var router: LocationWireframe!
 

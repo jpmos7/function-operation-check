@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WWS-Bo-eJO">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -26,20 +26,92 @@
         <!--位置情報-->
         <scene sceneID="SPM-0g-zXB">
             <objects>
-                <viewController storyboardIdentifier="Location" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9Z8-B3-nmr" customClass="LocationViewController" customModule="FunctionOperationCheck" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Location" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9Z8-B3-nmr" customClass="LocationViewController" customModule="動作確認" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aIW-fy-Y7h">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ftl-Ly-Vs6" userLabel="Latitude">
+                                <rect key="frame" x="81" y="311.66666666666669" width="252" height="22"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="緯度：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ypY-I8-spq">
+                                        <rect key="frame" x="0.0" y="0.0" width="52" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="bWC-za-B6z"/>
+                                            <constraint firstAttribute="width" constant="52" id="ojB-Uo-n5d"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDr-bn-U9P">
+                                        <rect key="frame" x="52" y="0.0" width="200" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="LMn-qM-vLQ"/>
+                                            <constraint firstAttribute="height" constant="22" id="ceH-T0-Da2"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dTf-aF-sOm" userLabel="Longitude">
+                                <rect key="frame" x="81" y="373.66666666666669" width="252" height="22"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="経度：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PS5-OD-AGb">
+                                        <rect key="frame" x="0.0" y="0.0" width="52" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="52" id="XkJ-q4-n56"/>
+                                            <constraint firstAttribute="height" constant="22" id="Xl5-tI-F3N"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcW-dc-qhp">
+                                        <rect key="frame" x="52" y="0.0" width="200" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="gyZ-il-jS5"/>
+                                            <constraint firstAttribute="height" constant="22" id="zyF-zm-q4f"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N4v-F4-ozW">
+                                <rect key="frame" x="153" y="435.66666666666669" width="108" height="30"/>
+                                <state key="normal" title="位置情報を取得"/>
+                                <connections>
+                                    <action selector="getLocationInfo:" destination="9Z8-B3-nmr" eventType="touchUpInside" id="FWA-3B-WHd"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="dTf-aF-sOm" firstAttribute="top" secondItem="Ftl-Ly-Vs6" secondAttribute="bottom" constant="40" id="3OC-to-deV"/>
+                            <constraint firstItem="N4v-F4-ozW" firstAttribute="centerY" secondItem="pPj-IM-OOM" secondAttribute="centerY" id="Dgl-9Q-AcT"/>
+                            <constraint firstItem="Ftl-Ly-Vs6" firstAttribute="centerX" secondItem="pPj-IM-OOM" secondAttribute="centerX" id="FdT-0p-73H"/>
+                            <constraint firstItem="dTf-aF-sOm" firstAttribute="centerX" secondItem="pPj-IM-OOM" secondAttribute="centerX" id="GDB-G9-4d3"/>
+                            <constraint firstItem="N4v-F4-ozW" firstAttribute="centerX" secondItem="pPj-IM-OOM" secondAttribute="centerX" id="PBe-Q6-f4G"/>
+                            <constraint firstItem="N4v-F4-ozW" firstAttribute="top" secondItem="dTf-aF-sOm" secondAttribute="bottom" constant="40" id="iMR-My-BYc"/>
+                            <constraint firstItem="dTf-aF-sOm" firstAttribute="top" secondItem="Ftl-Ly-Vs6" secondAttribute="bottom" constant="40" id="v10-iR-xaj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="pPj-IM-OOM"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="位置情報" image="location.fill" catalog="system" id="Ryx-0c-Kyg"/>
                     <navigationItem key="navigationItem" id="kZF-T9-CFS"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="latitude" destination="oDr-bn-U9P" id="MXf-J0-KPw"/>
+                        <outlet property="longitude" destination="kcW-dc-qhp" id="KWQ-wS-j0P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ebN-8g-iK6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="232" y="119"/>
+            <point key="canvasLocation" x="231.19999999999999" y="118.29085457271366"/>
         </scene>
     </scenes>
     <resources>

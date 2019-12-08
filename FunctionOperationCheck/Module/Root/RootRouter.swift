@@ -18,10 +18,12 @@ class RootRouter {
 
         // 地図情報
         let mapView = R.storyboard.map.map()
+        MapRouter(viewController: mapView!).initializerModule()
         let mapNavigation = UINavigationController(rootViewController: mapView!)
 
         // 位置情報
         let locationView = R.storyboard.location.location()
+        LocationRouter(viewController: locationView!).initializerModule()
         let locationNavigation = UINavigationController(rootViewController: locationView!)
 
         // タブに詰める ViewController を追加する
