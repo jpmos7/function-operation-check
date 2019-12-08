@@ -44,7 +44,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDr-bn-U9P">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="デフォルト" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDr-bn-U9P">
                                         <rect key="frame" x="52" y="0.0" width="200" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="LMn-qM-vLQ"/>
@@ -69,7 +69,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcW-dc-qhp">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="デフォルト" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcW-dc-qhp">
                                         <rect key="frame" x="52" y="0.0" width="200" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="gyZ-il-jS5"/>
@@ -88,15 +88,24 @@
                                     <action selector="getLocationInfo:" destination="9Z8-B3-nmr" eventType="touchUpInside" id="FWA-3B-WHd"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NKv-SA-4H0">
+                                <rect key="frame" x="184" y="485.66666666666669" width="46" height="30.000000000000057"/>
+                                <state key="normal" title="クリア"/>
+                                <connections>
+                                    <action selector="clearLabel:" destination="9Z8-B3-nmr" eventType="touchUpInside" id="g3S-Zz-Zaz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="NKv-SA-4H0" firstAttribute="top" secondItem="N4v-F4-ozW" secondAttribute="bottom" constant="20" id="1Sd-il-sr6"/>
                             <constraint firstItem="dTf-aF-sOm" firstAttribute="top" secondItem="Ftl-Ly-Vs6" secondAttribute="bottom" constant="40" id="3OC-to-deV"/>
                             <constraint firstItem="N4v-F4-ozW" firstAttribute="centerY" secondItem="pPj-IM-OOM" secondAttribute="centerY" id="Dgl-9Q-AcT"/>
                             <constraint firstItem="Ftl-Ly-Vs6" firstAttribute="centerX" secondItem="pPj-IM-OOM" secondAttribute="centerX" id="FdT-0p-73H"/>
                             <constraint firstItem="dTf-aF-sOm" firstAttribute="centerX" secondItem="pPj-IM-OOM" secondAttribute="centerX" id="GDB-G9-4d3"/>
                             <constraint firstItem="N4v-F4-ozW" firstAttribute="centerX" secondItem="pPj-IM-OOM" secondAttribute="centerX" id="PBe-Q6-f4G"/>
                             <constraint firstItem="N4v-F4-ozW" firstAttribute="top" secondItem="dTf-aF-sOm" secondAttribute="bottom" constant="40" id="iMR-My-BYc"/>
+                            <constraint firstItem="NKv-SA-4H0" firstAttribute="centerX" secondItem="pPj-IM-OOM" secondAttribute="centerX" id="rOD-LX-PSe"/>
                             <constraint firstItem="dTf-aF-sOm" firstAttribute="top" secondItem="Ftl-Ly-Vs6" secondAttribute="bottom" constant="40" id="v10-iR-xaj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pPj-IM-OOM"/>
@@ -105,8 +114,8 @@
                     <navigationItem key="navigationItem" id="kZF-T9-CFS"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="latitude" destination="oDr-bn-U9P" id="MXf-J0-KPw"/>
-                        <outlet property="longitude" destination="kcW-dc-qhp" id="KWQ-wS-j0P"/>
+                        <outlet property="latitude" destination="oDr-bn-U9P" id="KGs-Ra-mjn"/>
+                        <outlet property="longitude" destination="kcW-dc-qhp" id="vyZ-9o-LvD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ebN-8g-iK6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
