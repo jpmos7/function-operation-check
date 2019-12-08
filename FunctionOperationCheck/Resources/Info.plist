@@ -2,14 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>写真アプリにアクセスします</string>
-	<key>NSCameraUsageDescription</key>
-	<string>カメラを利用します</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>位置情報を取得します</string>
 	<key>CFBundleDevelopmentRegion</key>
-	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<string>ja_JP</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -26,6 +20,12 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>カメラを利用します</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>位置情報を取得します</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>写真アプリにアクセスします</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
