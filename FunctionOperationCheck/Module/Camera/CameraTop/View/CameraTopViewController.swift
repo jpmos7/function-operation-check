@@ -2,9 +2,6 @@
 //  CameraTopViewController.swift
 //  FunctionOperationCheck
 //
-//  Created by 齊藤萌 on 2019/12/07.
-//  Copyright © 2019 Swift-Biginners. All rights reserved.
-//
 
 import UIKit
 
@@ -16,4 +13,10 @@ class CameraTopViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+
+    /// UIImagePickerController カメラを起動する
+    /// - Parameter sender: "UIImagePickerController"ボタン
+    @IBAction func startUiImagePickerController(_ sender: Any) {
+    }
+
 }

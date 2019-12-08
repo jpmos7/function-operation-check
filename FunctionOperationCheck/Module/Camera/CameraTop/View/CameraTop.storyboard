@@ -26,11 +26,24 @@
         <!--カメラ-->
         <scene sceneID="SPM-0g-zXB">
             <objects>
-                <viewController storyboardIdentifier="CameraTop" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9Z8-B3-nmr" customClass="LocationViewController" customModule="動作確認" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CameraTop" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9Z8-B3-nmr" customClass="CameraTopViewController" customModule="動作確認" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aIW-fy-Y7h">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fV3-Ka-7ki">
+                                <rect key="frame" x="124" y="433" width="167" height="30"/>
+                                <state key="normal" title="UIImagePickerController"/>
+                                <connections>
+                                    <action selector="startUiImagePickerController:" destination="9Z8-B3-nmr" eventType="touchUpInside" id="gzc-1e-zu3"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="fV3-Ka-7ki" firstAttribute="centerX" secondItem="pPj-IM-OOM" secondAttribute="centerX" id="lqu-WZ-vPB"/>
+                            <constraint firstItem="fV3-Ka-7ki" firstAttribute="centerY" secondItem="pPj-IM-OOM" secondAttribute="centerY" id="uyd-gm-dhx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="pPj-IM-OOM"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="カメラ" image="camera.fill" catalog="system" id="Ryx-0c-Kyg"/>
