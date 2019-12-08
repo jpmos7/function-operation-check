@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 
+/// Map の VIew
 class MapViewController: UIViewController {
 
     var presenter: MapPresentation?

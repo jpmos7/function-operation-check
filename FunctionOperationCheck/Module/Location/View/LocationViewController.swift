@@ -9,6 +9,7 @@
 import UIKit
 import CoreLocation
 
+/// Location の VIew
 class LocationViewController: UIViewController {
 
     var presenter: LocationPresentation?
@@ -23,6 +24,7 @@ class LocationViewController: UIViewController {
     // 経度
     var longitudeNow: String = ""
 
+    /// ロケーションマネージャ
     var locationManager: CLLocationManager!
 
     override func viewDidLoad() {
@@ -32,16 +34,18 @@ class LocationViewController: UIViewController {
         latitude.text = "デフォルト"
         longitude.text = "デフォルト"
 
+        // ロケーションマネージャのセットアップ
         setupLocationManager()
     }
 
-    /// "位置情報を取得"ボタンを押下した際、実機の位置情報を取得する
+    /// "位置情報を取得"ボタンを押下した際、位置情報をラベルに反映する
     /// - Parameter sender: "位置情報を取得"ボタン
     @IBAction func getLocationInfo(_ sender: Any) {
         self.latitude.text = latitudeNow
         self.longitude.text = longitudeNow
     }
 
+    /// ロケーションマネージャのセットアップ
     func setupLocationManager() {
         locationManager = CLLocationManager()
 
@@ -53,7 +57,6 @@ class LocationViewController: UIViewController {
         let status = CLLocationManager.authorizationStatus()
         if status == .authorizedWhenInUse {
             locationManager.delegate = self
-            //locationManager.distanceFilter = 10
             locationManager.startUpdatingLocation()
         }
     }
@@ -61,11 +64,15 @@ class LocationViewController: UIViewController {
 
 extension LocationViewController: CLLocationManagerDelegate {
 
+    /// 位置情報が更新された際、位置情報を格納する
+    /// - Parameters:
+    ///   - manager: ロケーションマネージャ
+    ///   - locations: 位置情報
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations.first
         let latitude = location?.coordinate.latitude
         let longitude = location?.coordinate.longitude
-
+        // 位置情報を格納する
         self.latitudeNow = String(latitude!)
         self.longitudeNow = String(longitude!)
     }
